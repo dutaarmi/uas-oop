@@ -1,0 +1,25 @@
+class Book:
+    def __init__(self, title, author, year):
+        self.title = title
+        self.author = author
+        self.year = year
+
+    def display_info(self):
+        print(f"Title: {self.title}")
+        print(f"Author: {self.author}")
+        print(f"Year of Publication: {self.year}")
+
+    def is_antique(self):
+        return self.year < 2000
+
+# Membuat objek dari class "Book"
+book_example = Book("The Catcher in the Rye", "J.D. Salinger", 1951)
+
+# Menampilkan informasi lengkap buku
+book_example.display_info()
+
+# Menentukan apakah buku tersebut "kuno" atau tidak
+if book_example.is_antique():
+    print("Status: This book is antique.")
+else:
+    print("Status: This book is not antique.")
